@@ -2,6 +2,8 @@ import pygame
 import sys
 from settings import *
 
+from game import run_game
+
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
@@ -68,7 +70,7 @@ def main_menu_loop():
 
 def handle_menu_selection(choice):
     if choice == "Начать игру":
-        print("Старт новой игры")
+        run_game()
     elif choice == "Продолжить":
         print("загрузка последней игры...")    # ост пункты
     elif choice == "Выход":
